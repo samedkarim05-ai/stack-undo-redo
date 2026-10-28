@@ -1,0 +1,27 @@
+* { box-sizing: border-box; }
+:root { font-family: Arial, Helvetica, sans-serif; color: #1e293b; background: #f1f5f9; }
+body { margin: 0; }
+.container { width: min(900px, 92%); margin: 36px auto; }
+header { text-align: center; margin-bottom: 26px; }
+.eyebrow { color: #2563eb; font-weight: 700; letter-spacing: 2px; font-size: .78rem; }
+h1 { margin: 8px 0; font-size: clamp(2rem, 5vw, 3rem); }
+.intro { color: #64748b; }
+.panel, .info-card, .explanation { background: white; border: 1px solid #e2e8f0; border-radius: 16px; padding: 22px; box-shadow: 0 8px 25px rgba(15, 23, 42, .05); }
+label { display: block; font-weight: 700; margin-bottom: 10px; }
+textarea { width: 100%; min-height: 240px; resize: vertical; border: 1px solid #cbd5e1; border-radius: 10px; padding: 14px; font: 1rem/1.6 Arial, sans-serif; color: #0f172a; outline: none; }
+textarea:focus { border-color: #2563eb; box-shadow: 0 0 0 3px rgba(37, 99, 235, .12); }
+.actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 14px; }
+button { border: 0; border-radius: 9px; background: #2563eb; color: white; padding: 11px 18px; font-size: .95rem; font-weight: 700; cursor: pointer; }
+button:hover:not(:disabled) { background: #1d4ed8; }
+button:disabled { opacity: .45; cursor: not-allowed; }
+button.secondary { background: #e2e8f0; color: #334155; }
+button.secondary:hover { background: #cbd5e1; }
+.status { color: #64748b; font-size: .9rem; margin-bottom: 0; }
+.info-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; margin: 18px 0; }
+.info-card h2, .explanation h2 { margin-top: 0; font-size: 1.1rem; }
+.info-card p { color: #64748b; min-height: 38px; }
+.count { font-weight: 700; color: #2563eb; }
+.explanation li { margin: 9px 0; line-height: 1.5; }
+.explanation p { background: #eff6ff; padding: 12px; border-radius: 8px; }
+footer { text-align: center; color: #64748b; padding: 22px; font-size: .85rem; }
+@media (max-width: 600px) { .container { margin: 22px auto; } .panel, .info-card, .explanation { padding: 16px; } .info-grid { grid-template-columns: 1fr; } }

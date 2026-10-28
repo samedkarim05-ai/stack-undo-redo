@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stack Undo and Redo Editor</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    <header>
+      <p class="eyebrow">DATA STRUCTURES PROJECT</p>
+      <h1>Undo &amp; Redo Text Editor</h1>
+      <p class="intro">A simple demonstration of the stack data structure using LIFO.</p>
+    </header>
+
+    <section class="panel">
+      <label for="editor">Your text</label>
+      <textarea id="editor" placeholder="Type something here..."></textarea>
+      <div class="actions">
+        <button id="undoBtn" type="button" disabled>↶ Undo</button>
+        <button id="redoBtn" type="button" disabled>↷ Redo</button>
+        <button id="clearBtn" class="secondary" type="button">Clear</button>
+      </div>
+      <p id="status" class="status" aria-live="polite">Start typing to create your editing history.</p>
+    </section>
+
+    <section class="info-grid">
+      <article class="info-card">
+        <h2>Undo stack</h2>
+        <p>Stores earlier versions of your text.</p>
+        <div id="undoCount" class="count">0 states</div>
+      </article>
+      <article class="info-card">
+        <h2>Redo stack</h2>
+        <p>Stores versions you can restore after undoing.</p>
+        <div id="redoCount" class="count">0 states</div>
+      </article>
+    </section>
+
+    <section class="explanation">
+      <h2>How stacks work here</h2>
+      <ol>
+        <li>Each edit saves the previous text state in the undo stack.</li>
+        <li>Undo pops the most recent state from the undo stack.</li>
+        <li>Redo pops a state from the redo stack and restores it.</li>
+        <li>Making a new edit clears the redo stack.</li>
+      </ol>
+      <p><strong>LIFO:</strong> Last In, First Out — the newest saved state is used first.</p>
+    </section>
+    <footer>Built with HTML, CSS and JavaScript.</footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
